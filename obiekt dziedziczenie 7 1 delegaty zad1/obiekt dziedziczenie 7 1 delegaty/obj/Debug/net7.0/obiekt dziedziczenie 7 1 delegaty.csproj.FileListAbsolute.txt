@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\bin\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.exe
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\bin\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.deps.json
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\bin\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.runtimeconfig.json
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\bin\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.dll
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\bin\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.pdb
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\obj\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\obj\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\obj\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.AssemblyInfo.cs
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\obj\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\obj\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.dll
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\obj\Debug\net7.0\refint\obiekt dziedziczenie 7 1 delegaty.dll
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\obj\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.pdb
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\obj\Debug\net7.0\obiekt dziedziczenie 7 1 delegaty.genruntimeconfig.cache
+C:\Users\Student\Desktop\obiekt dziedziczenie 7 1 delegaty\obiekt dziedziczenie 7 1 delegaty\obj\Debug\net7.0\ref\obiekt dziedziczenie 7 1 delegaty.dll
