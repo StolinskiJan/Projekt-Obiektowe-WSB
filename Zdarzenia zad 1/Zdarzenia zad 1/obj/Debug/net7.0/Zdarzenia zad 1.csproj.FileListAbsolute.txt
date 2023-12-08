@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\bin\Debug\net7.0\Zdarzenia zad 1.exe
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\bin\Debug\net7.0\Zdarzenia zad 1.deps.json
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\bin\Debug\net7.0\Zdarzenia zad 1.runtimeconfig.json
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\bin\Debug\net7.0\Zdarzenia zad 1.dll
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\bin\Debug\net7.0\Zdarzenia zad 1.pdb
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\obj\Debug\net7.0\Zdarzenia zad 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\obj\Debug\net7.0\Zdarzenia zad 1.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\obj\Debug\net7.0\Zdarzenia zad 1.AssemblyInfo.cs
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\obj\Debug\net7.0\Zdarzenia zad 1.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\obj\Debug\net7.0\Zdarzenia zad 1.dll
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\obj\Debug\net7.0\refint\Zdarzenia zad 1.dll
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\obj\Debug\net7.0\Zdarzenia zad 1.pdb
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\obj\Debug\net7.0\Zdarzenia zad 1.genruntimeconfig.cache
+C:\Users\Student\Desktop\Zdarzenia zad 1\Zdarzenia zad 1\obj\Debug\net7.0\ref\Zdarzenia zad 1.dll
