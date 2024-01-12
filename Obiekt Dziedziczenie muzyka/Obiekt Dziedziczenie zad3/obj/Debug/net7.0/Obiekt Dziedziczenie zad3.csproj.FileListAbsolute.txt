@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\bin\Debug\net7.0\Obiekt Dziedziczenie zad3.exe
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\bin\Debug\net7.0\Obiekt Dziedziczenie zad3.deps.json
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\bin\Debug\net7.0\Obiekt Dziedziczenie zad3.runtimeconfig.json
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\bin\Debug\net7.0\Obiekt Dziedziczenie zad3.dll
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\bin\Debug\net7.0\Obiekt Dziedziczenie zad3.pdb
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\obj\Debug\net7.0\Obiekt Dziedziczenie zad3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\obj\Debug\net7.0\Obiekt Dziedziczenie zad3.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\obj\Debug\net7.0\Obiekt Dziedziczenie zad3.AssemblyInfo.cs
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\obj\Debug\net7.0\Obiekt Dziedziczenie zad3.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\obj\Debug\net7.0\Obiekt Dziedziczenie zad3.dll
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\obj\Debug\net7.0\refint\Obiekt Dziedziczenie zad3.dll
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\obj\Debug\net7.0\Obiekt Dziedziczenie zad3.pdb
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\obj\Debug\net7.0\Obiekt Dziedziczenie zad3.genruntimeconfig.cache
+C:\Users\Student\Desktop\Obiekt Dziedziczenie zad3\Obiekt Dziedziczenie zad3\obj\Debug\net7.0\ref\Obiekt Dziedziczenie zad3.dll
