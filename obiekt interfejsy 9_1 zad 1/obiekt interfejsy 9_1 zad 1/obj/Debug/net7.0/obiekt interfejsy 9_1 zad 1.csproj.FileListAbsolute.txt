@@ -1,0 +1,14 @@
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\bin\Debug\net7.0\obiekt interfejsy 9_1 zad 1.exe
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\bin\Debug\net7.0\obiekt interfejsy 9_1 zad 1.deps.json
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\bin\Debug\net7.0\obiekt interfejsy 9_1 zad 1.runtimeconfig.json
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\bin\Debug\net7.0\obiekt interfejsy 9_1 zad 1.dll
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\bin\Debug\net7.0\obiekt interfejsy 9_1 zad 1.pdb
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\obj\Debug\net7.0\obiekt interfejsy 9_1 zad 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\obj\Debug\net7.0\obiekt interfejsy 9_1 zad 1.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\obj\Debug\net7.0\obiekt interfejsy 9_1 zad 1.AssemblyInfo.cs
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\obj\Debug\net7.0\obiekt interfejsy 9_1 zad 1.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\obj\Debug\net7.0\obiekt interfejsy 9_1 zad 1.dll
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\obj\Debug\net7.0\refint\obiekt interfejsy 9_1 zad 1.dll
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\obj\Debug\net7.0\obiekt interfejsy 9_1 zad 1.pdb
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\obj\Debug\net7.0\obiekt interfejsy 9_1 zad 1.genruntimeconfig.cache
+C:\Users\Student\source\repos\obiekt interfejsy 9_1 zad 1\obiekt interfejsy 9_1 zad 1\obj\Debug\net7.0\ref\obiekt interfejsy 9_1 zad 1.dll
