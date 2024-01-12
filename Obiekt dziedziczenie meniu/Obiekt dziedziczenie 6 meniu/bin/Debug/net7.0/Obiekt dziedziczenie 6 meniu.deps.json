@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Obiekt dziedziczenie 6 meniu/1.0.0": {
+        "runtime": {
+          "Obiekt dziedziczenie 6 meniu.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Obiekt dziedziczenie 6 meniu/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
