@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "obiektówka konstruktory (zad2)/1.0.0": {
+        "runtime": {
+          "obiektówka konstruktory (zad2).dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "obiektówka konstruktory (zad2)/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

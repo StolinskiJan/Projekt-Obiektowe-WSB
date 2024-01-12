@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\bin\Debug\net7.0\obiektówka konstruktory (zad2).exe
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\bin\Debug\net7.0\obiektówka konstruktory (zad2).deps.json
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\bin\Debug\net7.0\obiektówka konstruktory (zad2).runtimeconfig.json
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\bin\Debug\net7.0\obiektówka konstruktory (zad2).dll
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\bin\Debug\net7.0\obiektówka konstruktory (zad2).pdb
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\obj\Debug\net7.0\obiektówka konstruktory (zad2).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\obj\Debug\net7.0\obiektówka konstruktory (zad2).AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\obj\Debug\net7.0\obiektówka konstruktory (zad2).AssemblyInfo.cs
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\obj\Debug\net7.0\obiektówka konstruktory (zad2).csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\obj\Debug\net7.0\obiektówka konstruktory (zad2).dll
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\obj\Debug\net7.0\refint\obiektówka konstruktory (zad2).dll
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\obj\Debug\net7.0\obiektówka konstruktory (zad2).pdb
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\obj\Debug\net7.0\obiektówka konstruktory (zad2).genruntimeconfig.cache
+C:\Users\Student\Desktop\obiektówka konstruktory (zad2)\obiektówka konstruktory (zad2)\obj\Debug\net7.0\ref\obiektówka konstruktory (zad2).dll
