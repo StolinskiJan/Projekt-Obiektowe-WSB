@@ -1,0 +1,28 @@
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.exe
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.deps.json
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.runtimeconfig.json
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.dll
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.pdb
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.AssemblyInfo.cs
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.dll
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\obj\Debug\net7.0\refint\Obiekt Serializacja.dll
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.pdb
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.genruntimeconfig.cache
+C:\Users\Student\Desktop\Obiekt Serializacja\Obiekt Serializacja\obj\Debug\net7.0\ref\Obiekt Serializacja.dll
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.exe
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.deps.json
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.runtimeconfig.json
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.dll
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\bin\Debug\net7.0\Obiekt Serializacja.pdb
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.AssemblyInfo.cs
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.dll
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\obj\Debug\net7.0\refint\Obiekt Serializacja.dll
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.pdb
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\obj\Debug\net7.0\Obiekt Serializacja.genruntimeconfig.cache
+C:\Users\Student\Desktop\Obiekt Serializacja 11 1\Obiekt Serializacja\obj\Debug\net7.0\ref\Obiekt Serializacja.dll
