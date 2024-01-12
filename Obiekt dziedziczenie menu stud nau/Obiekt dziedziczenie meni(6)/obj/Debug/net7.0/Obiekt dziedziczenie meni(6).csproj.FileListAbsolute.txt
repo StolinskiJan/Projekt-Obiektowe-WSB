@@ -1,0 +1,14 @@
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\bin\Debug\net7.0\Obiekt dziedziczenie meni(6).exe
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\bin\Debug\net7.0\Obiekt dziedziczenie meni(6).deps.json
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\bin\Debug\net7.0\Obiekt dziedziczenie meni(6).runtimeconfig.json
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\bin\Debug\net7.0\Obiekt dziedziczenie meni(6).dll
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\bin\Debug\net7.0\Obiekt dziedziczenie meni(6).pdb
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\obj\Debug\net7.0\Obiekt dziedziczenie meni(6).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\obj\Debug\net7.0\Obiekt dziedziczenie meni(6).AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\obj\Debug\net7.0\Obiekt dziedziczenie meni(6).AssemblyInfo.cs
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\obj\Debug\net7.0\Obiekt dziedziczenie meni(6).csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\obj\Debug\net7.0\Obiekt dziedziczenie meni(6).dll
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\obj\Debug\net7.0\refint\Obiekt dziedziczenie meni(6).dll
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\obj\Debug\net7.0\Obiekt dziedziczenie meni(6).pdb
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\obj\Debug\net7.0\Obiekt dziedziczenie meni(6).genruntimeconfig.cache
+C:\Users\Student\Desktop\Obiekt dziedziczenie meni(6)\Obiekt dziedziczenie meni(6)\obj\Debug\net7.0\ref\Obiekt dziedziczenie meni(6).dll
