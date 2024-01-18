@@ -1,0 +1,441 @@
+Temat1 selekcjia i projekcja
+
+1 SELECT tytul FROM filmy WHERE rok_produkcji= 1998 OR rok_produkcji=1999
+2 SELECT tytul, cena FROM filmy WHERE cena>9 ORDER BY cena
+3 SELECT nazwisko FROM klienci WHERE imie='jan'
+4 SELECT imie, nazwisko FROM klienci WHERE length(imie)>length(nazwisko)
+5 SELECT nazwisko FROM aktorzy WHERE imie='Arnold' OR imie='Tom' OR imie=
+  'Jodie' ORDER BY nazwisko
+6 SELECT DISTINCT id_filmu FROM kopie WHERE czy_dostepna='T' ORDER BY 
+  id_filmu ASC
+7 SELECT DISTINCT id_kopii FROM wypozyczenia WHERE data_wypozyczenia 
+  BETWEEN'2005-07-15' AND '2005-07-22' ORDER BY id_kopii ASC
+8 SELECT id_kopii, data_zwrotu-data_wypozyczenia AS czas FROM wypozyczenia
+  WHERE data_zwrotu-data_wypozyczenia>1
+9 /ch/ SELECT CONCAT(LEFT(imie, 1), '.', ' ', nazwisko) AS 
+"Imię i Nazwisko Aktora" FROM aktorzy;
+10 SELECT tytul FROM filmy ORDER BY length(tytul)
+11 SELECT tytul, cena FROM filmy ORDER BY rok_produkcji DESC LIMIT 3
+12 SELECT imie,substring(imie FROM 1 for 1) AS pierwsza, substring
+   (imie FROM length(imie) FOR length(imie)) AS ostatnia FROM klienci
+13 SELECT imie FROM klienci WHERE substring(imie FROM 1 FOR 1) = 
+   substring(imie FROM length(imie) FOR length(imie))
+14 /ch/ SELECT tytul FROM filmy WHERE SUBSTRING(tytul, LENGTH(tytul) - 1, 1)
+ = 'o';
+15 /ch/ SELECT CONCAT(LOWER(imie), '.', LOWER(nazwisko), '@wsb.pl') AS 
+"Adres E-mail" FROM klienci;
+
+
+
+Temat 2 połączenia
+
+Od wykładowcy
+
+1 SELECT * FROM filmy NATURAL JOIN kopie WHERE kopie.czy_dostepna = 'T'
+2 SELECT filmy.tytul, kopie.id_kopii, wypozyczenia.data_wypozyczenia 
+  FROM filmy NATURAL JOIN kopie NATURAL JOIN wypozyczenia 
+3 SELECT * FROM filmy JOIN kopie ON filmy.id_filmu*kopie.id_filmu
+
+
+
+Moje
+
+1 SELECT id_kopii, tytul FROM filmy NATURAL JOIN kopie 
+// SELECT kopie.id_kopii, filmy.tytul FROM filmy NATURAL JOIN kopie
+2 SELECT DISTINCT filmy.tytul FROM filmy NATURAL JOIN kopie where 
+  kopie.czy_dostepna='T'
+3 SELECT k.id_kopii FROM kopie k JOIN filmy f ON k.id_filmu = f.id_filmu 
+WHERE f.rok_produkcji = 1984;
+//M? SELECT kopie.id_kopii FROM kopie NATURAL JOIN filmy WHERE 
+filmy.rok_produkcji=1890
+4 SELECT wypozyczenia.data_wypozyczenia, wypozyczenia.data_zwrotu, 
+klienci.nazwisko FROM wypozyczenia NATURAL JOIN klienci
+5 SELECT klienci.nazwisko, filmy.tytul FROM klienci NATURAL JOIN filmy 
+NATURAL JOIN kopie NATURAL JOIN wypozyczenia
+
+/ch/ SELECT k.nazwisko AS "Nazwisko Klienta", 
+            f.tytul AS "Tytuł Wypożyczonego Filmu"
+FROM wypozyczenia w
+JOIN klienci k ON w.id_klienta = k.id_klienta
+JOIN kopie ko ON w.id_kopii = ko.id_kopii
+JOIN filmy f ON ko.id_filmu = f.id_filmu;
+6 SELECT filmy.tytul,filmy.rok_produkcji FROM filmy NATURAL JOIN 
+klienci NATURAL JOIN kopie NATURAL JOIN wypozyczenia WHERE 
+klienci.nazwisko='Kowalski'
+7 SELECT klienci.nazwisko FROM klienci NATURAL JOIN wypozyczenia ORDER BY 
+wypozyczenia.data_wypozyczenia LIMIT 1
+8 SELECT aktorzy.nazwisko FROM aktorzy NATURAL JOIN filmy NATURAL JOIN 
+obsada WHERE filmy.tytul='Terminator'
+9 SELECT filmy.tytul FROM filmy NATURAL JOIN aktorzy NATURAL JOIN 
+obsada WHERE aktorzy.nazwisko='De Niro'
+10 
+11 SELECT DISTINCT klienci.nazwisko FROM wypozyczenia NATURAL JOIN klienci 
+WHERE wypozyczenia.data_wypozyczenia BETWEEN '2005-07-15' AND '2005-07-20'
+12 SELECT DISTINCT filmy.tytul FROM wypozyczenia NATURAL JOIN filmy NATURAL 
+JOIN kopie WHERE wypozyczenia.data_wypozyczenia BETWEEN 
+'2005-07-15' AND '2005-07-25'
+13 SELECT klienci.imie, klienci.nazwisko, aktorzy.nazwisko FROM klienci 
+NATURAL JOIN aktorzy WHERE klienci.imie=aktorzy.imie
+// SELECT klienci.imie, klienci.nazwisko, aktorzy.nazwisko FROM klienci 
+JOIN aktorzy ON klienci.imie = aktorzy.imie;
+
+
+
+Temat 3 Operacje mnogościowe,grupowanie
+
+Od wykładowcy
+
+1 SELECT pracownicy.miasto, AVG (pracownicy.pensja) AS srednia FROM 
+pracownicy GROUP BY pracownicy.miasto
+2 SELECT pracownicy.miasto, AVG (pracownicy.pensja) AS srednia FROM 
+pracownicy GROUP BY pracownicy.miasto HAVING srednia > 100
+
+Mnogościowe
+
+1 SELECT klienci.nazwisko FROM klienci
+UNION 
+SELECT aktorzy.nazwisko FROM aktorzy ORDER BY nazwisko ASC
+2 SELECT filmy.tytul FROM filmy NATURAL JOIN aktorzy NATURAL JOIN obsada 
+WHERE aktorzy.nazwisko='De Niro'
+intersect
+SELECT filmy.tytul FROM filmy NATURAL JOIN aktorzy NATURAL JOIN obsada 
+WHERE aktorzy.nazwisko='Reno'
+3 SELECT filmy.tytul FROM filmy NATURAL JOIN klienci NATURAL JOIN 
+wypozyczenia NATURAL JOIN kopie WHERE klienci.nazwisko='Kowalski'
+intersect
+SELECT filmy.tytul FROM filmy NATURAL JOIN klienci NATURAL JOIN 
+wypozyczenia NATURAL JOIN kopie WHERE klienci.nazwisko='Nowak'
+4 SELECT filmy.tytul FROM filmy NATURAL JOIN klienci NATURAL JOIN 
+wypozyczenia NATURAL JOIN kopie WHERE klienci.nazwisko='Kowalski'
+except
+SELECT filmy.tytul FROM filmy NATURAL JOIN klienci NATURAL JOIN 
+wypozyczenia NATURAL JOIN kopie WHERE klienci.nazwisko='Nowak'
+5 SELECT aktorzy.nazwisko FROM filmy NATURAL JOIN aktorzy NATURAL JOIN 
+obsada WHERE filmy.tytul='Terminator'
+except
+SELECT aktorzy.nazwisko FROM filmy NATURAL JOIN aktorzy NATURAL JOIN 
+obsada WHERE filmy.tytul='Ghostbusters'
+
+Grupowanie
+
+1 SELECT filmy.rok_produkcji, AVG(filmy.cena) FROM filmy NATURAL JOIN 
+wypozyczenia NATURAL JOIN kopie GROUP By filmy.rok_produkcji
+2 /ch/ SELECT MAX(cena) AS "max" FROM filmy
+3 /ch/ SELECT COUNT(*) AS"count" FROM filmy WHERE filmy.rok_produkcji='1984'
+4 SELECT COUNT(*) AS"count" FROM wypozyczenia NATURAL JOIN filmy 
+NATURAL JOIN kopie WHERE filmy.tytul='Taksowkarz'
+5 SELECT ROUND(AVG(data_zwrotu - data_wypozyczenia),1) AS "round" 
+FROM filmy NATURAL JOIN wypozyczenia NATURAL JOIN kopie WHERE 
+filmy.tytul='Ronin'
+6 SELECT filmy.tytul, 
+ROUND(min(wypozyczenia.data_zwrotu - wypozyczenia.data_wypozyczenia),1) 
+AS"min", 
+round(max(wypozyczenia.data_zwrotu - wypozyczenia.data_wypozyczenia),1) 
+AS"max", 
+ROUND(AVG(wypozyczenia.data_zwrotu-wypozyczenia.data_wypozyczenia),1) 
+AS"sre", COUNT(*) AS"razy" FROM filmy NATURAL JOIN wypozyczenia 
+NATURAL JOIN kopie GROUP BY filmy.tytul 
+7 SELECT klienci.imie AS "imie", klienci.nazwisko AS "nazwisko", 
+COUNT(klienci.id_klienta) AS "count" FROM wypozyczenia NATURAL JOIN 
+klienci NATURAL JOIN kopie NATURAL JOIN filmy GROUP BY klienci.imie, 
+klienci.nazwisko, klienci.id_klienta 
+8 /ch/ SELECT aktorzy.nazwisko AS "nazwisko", COUNT(DISTINCT filmy.id_filmu) 
+AS "filmy" FROM aktorzy JOIN obsada ON aktorzy.id_aktora = obsada.id_aktora 
+JOIN filmy ON obsada.id_filmu = filmy.id_filmu GROUP BY aktorzy.nazwisko
+HAVING COUNT(DISTINCT filmy.id_filmu) > 1;
+9 SELECT klienci.nazwisko AS 'nazwisko', IFNULL(SUM(filmy.cena), 0) AS 
+'kwota' FROM klienci NATURAL JOIN filmy NATURAL JOIN wypozyczenia NATURAL 
+JOIN kopie GROUP by klienci.nazwisko
+/ SELECT k.nazwisko AS "nazwisko", IFNULL(SUM(f.cena), 0) AS "kwota" 
+FROM klienci k LEFT JOIN wypozyczenia w ON k.id_klienta = w.id_klienta 
+LEFT JOIN kopie ko ON w.id_kopii = ko.id_kopii LEFT JOIN filmy f ON 
+ko.id_filmu = f.id_filmu GROUP BY k.nazwisko;
+
+
+
+Temat 4 Pod zapytania
+
+Od wykładowcy
+
+1 SELECT filmy.tytul FROM filmy WHERE filmy.cena=
+(SELECT MAX(filmy.cena) FROM filmy)
+
+2 SELECT filmy.id_filmu FROM filmy WHERE filmy.id_filmu IN
+(SELECT filmy.id_filmu FROM filmy WHERE filmy.cena > 8)
+
+3 SELECT kopie.id_kopii FROM kopie WHERE kopie.id_filmu IN
+(SELECT filmy.id_filmu FROM filmy WHERE filmy.cena > 8)
+
+4 SELECT pracownicy.nazwisko, pracownicy.pensja FROM pracownicy WHERE 
+pracownicy.pensja > ANY
+(SELECT pracownicy.pensja FROM pracownicy WHERE pracownicy.miasto= 'london')
+
+5 SELECT pracownicy.nazwisko, pracownicy.nazwisko FROM pracownicy WHERE 
+pracownicy.pensja > All
+(SELECT pracownicy.pensja FROM pracownicy WHERE pracownicy.miasto= 
+'New yourk')
+
+6 SELECT pracownicy.miasto, AVG(pracownicy.pensja) AS srednia FROM 
+pracownicy GROUP BY pracownicy.miasto HAVING srednia > 	
+(SELECT AVG(pracownicy.pensja) FROM pracownicy)
+#***
+7 SELECT statystyka.miasto, srednia, srednia*4.30 AS PLN FROM
+(SELECT pracownicy.miasto, AVG(pracownicy.pensja) AS srednia FROM 
+pracownicy GROUP BY pracownicy.miasto) AS statystyka
+#****
+
+8 SELECT miasto, nazwisko, pensja FROM pracownicy AS wiersz WHERE pensja >
+(SELECT AVG(pracownicy.pensja) FROM pracownicy WHERE pracownicy.miasto= 
+wiersz.miasto)
+
+#Select przyklady przed ostatnie
+
+9 SELECT DISTINCT miasto FROM pracownicy AS P1 WHERE EXISTS 
+(SELECT * FROM pracownicy WHERE pensja > 200 AND miasto=P1.miasto);
+
+
+
+Moje 
+
+1 SELECT tytul FROM filmy WHERE cena= (SELECT MAX(cena) FROM filmy)
+2 SELECT nazwisko FROM klienci NATURAL JOIN wypozyczenia WHERE 
+data_wypozyczenia = (SELECT MIN(data_wypozyczenia) FROM wypozyczenia)
+3 SELECT tytul FROM filmy WHERE filmy.id_filmu IN (SELECT DISTINCT 
+kopie.id_filmu FROM kopie WHERE kopie.czy_dostepna='T')
+4 SELECT tytul FROM filmy WHERE cena > 
+( SELECT cena FROM filmy WHERE tytul = 'Frantic')
+5 SELECT tytul FROM filmy WHERE cena > ( SELECT max(cena) 
+FROM filmy WHERE length(tytul)=6)
+
+Podzapytania skorelowane
+
+1 SELECT tytul, rok_produkcji, cena FROM filmy WHERE cena > 
+( SELECT AVG(cena) FROM filmy WHERE filmy.rok_produkcji=filmy.rok_produkcji)
+2 
+3 
+4 SELECT pracownicy.imie, pracownicy.nazwisko, pracownicy.miasto, 
+pracownicy.pensja FROM pracownicy WHERE pensja > ( SELECT AVG(pensja) 
+FROM pracownicy WHERE miasto=miasto)
+5 SELECT filmy.tytul FROM filmy NATURAL JOIN kopie WHERE 
+kopie.czy_dostepna='T' GROUP BY filmy.tytul HAVING COUNT(kopie.id_kopii) > 2
+6/ch/ SELECT DISTINCT
+    a.imie,
+    a.nazwisko
+FROM
+    aktorzy a
+JOIN
+    obsada o ON a.id_aktora = o.id_aktora
+JOIN
+    filmy f ON o.id_filmu = f.id_filmu
+JOIN
+    kopie k ON f.id_filmu = k.id_filmu
+JOIN
+    wypozyczenia w ON k.id_kopii = w.id_kopii
+JOIN
+    klienci kl ON w.id_klienta = kl.id_klienta
+WHERE
+    kl.imie = 'Jan';
+7/ch/ SELECT
+    f.tytul,
+    w.data_wypozyczenia
+FROM
+    filmy f
+JOIN
+    wypozyczenia w ON f.id_filmu = w.id_filmu
+JOIN
+    kopie k ON w.id_kopii = k.id_kopii
+WHERE
+    w.data_wypozyczenia < (
+        SELECT MIN(data_wypozyczenia)
+        FROM filmy f_ghostbusters
+        JOIN kopie k_ghostbusters ON f_ghostbusters.id_filmu = k_ghostbusters.id_filmu
+        JOIN wypozyczenia w_ghostbusters ON k_ghostbusters.id_kopii = w_ghostbusters.id_kopii
+        WHERE f_ghostbusters.tytul = 'Ghostbusters'
+    );
+8/ch/ SELECT
+    f.tytul,
+    COUNT(k.id_kopii) AS liczba_kopii,
+    SUM(CASE WHEN k.czy_dostepna = 'T' THEN 1 ELSE 0 END) AS 
+liczba_dostepnych_kopii
+FROM
+    filmy f
+JOIN
+    kopie k ON f.id_filmu = k.id_filmu
+GROUP BY
+    f.tytul
+HAVING
+    COUNT(k.id_kopii) >= 3 AND SUM(CASE WHEN k.czy_dostepna = 'T' 
+THEN 1 ELSE 0 END) >= 1;
+9 SELECT klienci.imie, klienci.nazwisko FROM filmy NATURAL JOIN klienci 
+NATURAL JOIN kopie NATURAL JOIN wypozyczenia  WHERE filmy.rok_produkcji='2004' 
+10?/ SELECT filmy.tytul FROM filmy NATURAL JOIN kopie WHERE 
+kopie.czy_dostepna='N' GROUP BY filmy.tytul HAVING  COUNT(kopie.id_kopii) >1
+11
+12/ch/ SELECT f.tytul
+FROM filmy f
+LEFT JOIN kopie k ON f.id_filmu = k.id_filmu
+LEFT JOIN wypozyczenia w ON k.id_kopii = w.id_kopii
+LEFT JOIN klienci kl ON w.id_klienta = kl.id_klienta AND kl.imie = 'Anna'
+WHERE kl.id_klienta IS NULL;
+
+
+
+Nie wiem /podzapytania/
+
+1 SELECT imie, nazwisko, COUNT(w.id_klienta) AS liczba_wypożyczen from klienci k JOIN wypozyczenia w ON k.id_klienta = w.id_klienta GROUP BY k.id_klienta
+2 SELECT k.imie, k.nazwisko, AVG(f.cena) AS sredniacena FROM klienci k
+  JOIN wypozyczenia w ON k.id_klienta=w.id_klienta
+  JOIN kopie ko ON w.id_kopii=ko.id_kopii
+  JOIN filmy f ON ko.id_filmu=f.id_filmu 
+  GROUP BY k.id_klienta
+3 
+4 SELECT f.tytul, a.imie, a.nazwisko 
+  FROM filmy f
+  JOIN obsada o ON f.id_filmu = o.id_filmu
+  JOIN aktorzy a ON o.id_aktora = a.id_aktora
+
+
+
+Temat 5 DML
+
+1 INSERT INTO filmy VALUES (11, 'Komornik', 2005, 10.5)
+2 DELETE FROM filmy WHERE filmy.rok_produkcji=2005
+3 UPDATE filmy SET cena = cena + 0.5 WHERE filmy.rok_produkcji< 1980
+4 INSERT INTO filmy VALUES(12, 'nikofor', 2004, 9.5)
+5 DELETE FROM filmy WHERE id_filmu NOT IN (SELECT DISTINCT id_filmu 
+FROM obsada);
+6 UPDATE filmy SET cena = 5 WHERE tytul = 'Taksowkarz'
+
+Temat DDL
+
+2 CREATE TABLE ksiazki (
+	id_ksiazki SERIAL,
+	tytul CHAR(30),
+	autor CHAR(30),
+	rok_wydania integer(4)
+)
+3 INSERT INTO ksiazki (ksiazki, autor, rok_wydania) VALUES 
+('Pan Tadeusz', 'Adam Mikiewicz',  '1995')
+4 Select column_name, data_type, character_maximum.......
+5 DROP TABLE ksiazki
+6 CREATE TABLE osoby (
+	Psel CHAR(11),
+	Imie VARCHAR(15),
+	Nazwisko VARCHAR(15),
+	Data_urodzenia DATE,
+	PRIMARY KEY (Pesel)
+)
+8 CREATE TABLE FAKTURA (
+	NUMBER SERIAL PRIMARY KEY,
+	Pesel CHAR(11),
+	Kwota DECIMAL(8,2) CHECK (Kwota > 0),
+	FOREIGN KEY Pesel REFERENCE osoby;
+)
+
+
+
+
+............................
+............................
+............................Inne Kolokwium
+
+1. Wyświetl tytuł, rok produkcji i cene filmów powstałych po roku 1988 i 
+kosztujących mniej niż 9 zł. Tytuły filmów powinny być wyświetlane wielkimi 
+literami.
+
+select upper(tytul), rok_produkcji, cena
+from filmy
+where rok_produkcji > '1988' and cena < 9;
+
+2. Wyświetl imiona i nazwiska wszystkich aktorów, którzy zagrali w filmie.
+ „Wesele”.
+
+select imie, nazwisko
+from aktorzy
+natural join obsada
+natural join filmy
+where tytul = 'Wesele'
+
+lub
+
+select imie, nazwisko
+from aktorzy
+join obsada on obsada.id_aktora = aktorzy.id_aktora
+join filmy on filmy.id_filmu = obsada.id_filmu
+where tytul = 'Wesele'
+
+3. Dla każdego klienta wyświetl jego imię, nazwisko oraz łączną sumę 
+dokonanych przez niego opłat za wypożyczenia.
+
+select imie, nazwisko, sum(cena)
+from klienci
+natural join wypozyczenia
+natural join kopie
+natural join filmy
+group by imie, nazwisko;
+
+4. Dla każdego klienta podaj jego nazwisko i imię a także liczbę filmów 
+jakie wypożyczył. Wyświetl tylko tych klientów, którzy za wypożyczenie 
+filmów zapłacili sumarycznie ponad 100 zł
+
+select nazwisko, imie, count(id_kopii)
+from klienci
+natural join wypozyczenia
+natural join kopie
+natural join filmy
+where cena > 100
+group by nazwisko, imie
+
+5. Podaj tytuły filmów, które zostały wypożyczone przez klienta o nazwisku 
+Lis, a w których nie zagrał aktor o nazwisku 'Reno'.
+
+select tytul
+from filmy
+natural join kopie
+natural join wypozyczenia
+natural join klienci
+where nazwisko = 'Lis'
+except
+select tytul
+from filmy
+natural join obsada
+natural join aktorzy
+where nazwisko = 'Reno'
+
+6. Wyświetl liczbę filmów, w których nie zagrał ani jeden aktor zaczynający 
+się na literę D. ((powiedzial ze potrzeba sprawdzic tylko nazwisko)
+
+select count(tytul)
+from filmy
+natural join obsada
+natural join aktorzy
+where lower(substring(nazwisko from 1 for 1)) != 'd'
+
+7. Utwórz relację o nazwie EGZAMINY o następującej strukturze: 
+
+   * atrybut ID_EGZAMINU typu całkowitoliczbowego, klucz podstawowy
+   * atrybut PRZEDMIOT typu łańcuch znakowy, maksymalnie 30 znaków, 
+wartość obowiązkowa
+   * atrybut DATA typu data, wartość późniejsza niż ’01-01-2016’
+
+create table EGZAMINY (
+	ID_EGZAMINU INTEGER PRIMARY KEY,
+	PRZEDMIOT VARCHAR(30) NOT NULL,
+	DATA DATE,
+	CHECK DATA > '01-01-2016');
+
+8. Napisz polecenie, które wstawi do relacji Filmy rekord o następujących 
+wartościach id_filmu=11, tytule ’Chlopaki nie placza’ wyprodukowanym w 2000, cena wypożyczenia wynosi 13.5
+
+insert into filmy
+values (11, 'Chlopaki nie placza', 2000, 13,5)
+
+
+
+
+
+
+
+
+
+
