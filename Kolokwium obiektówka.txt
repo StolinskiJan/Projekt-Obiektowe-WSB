@@ -1,0 +1,199 @@
+Napisz klasę Osoba, która ma pola imie, nazwisko i wiek, oraz konstruktor przyjmujący 
+te trzy parametry.
+ Napisz interfejs IPorownywalny, który ma metodę Porownaj(Osoba o1, Osoba o2), 
+zwracającą liczbę całkowitą oznaczającą wynik porównania dwóch obiektów 
+klasy Osoba. Wynik powinien być dodatni, jeśli o1 jest starsza niż o2, ujemny, 
+jeśli o1 jest młodsza niż o2, i zero, jeśli o1 i o2 mają taki sam wiek.
+ Napisz klasę Porownywacz, która implementuje interfejs IPorownywalny, i nadpisuje 
+metodę Porownaj tak, aby porównywała wiek osób.
+ Napisz delegatę Kryterium, która ma sygnaturę taką samą jak metoda Porownaj z 
+interfejsu IPorownywalny.
+ Napisz zdarzenie ZmianaKryterium, które jest typu Kryterium, i ma 
+akcesory add i remove.
+ Napisz metodę Sortuj, która przyjmuje tablicę obiektów klasy Osoba i delegatę 
+typu Kryterium, i sortuje tablicę według podanego kryterium. Metoda powinna 
+również wywoływać zdarzenie ZmianaKryterium za każdym razem, gdy zmienia się 
+kryterium sortowania.
+ Napisz metodę Wyswietl, która przyjmuje tablicę obiektów klasy Osoba i wyświetla ich 
+dane na konsoli.
+ Napisz kod testowy, który tworzy kilka obiektów klasy Osoba, umieszcza je w tablicy, 
+tworzy obiekt klasy Porownywacz, i sortuje tablicę według kryterium wieku. Kod 
+testowy powinien również zarejestrować metodę obsługi zdarzenia ZmianaKryterium, 
+która wyświetla informację o zmianie kryterium na konsoli
+
+
+
+using System;
+
+// Klasa Osoba
+class Osoba
+{
+    public string Imie { get; set; }
+    public string Nazwisko { get; set; }
+    public int Wiek { get; set; }
+
+    // Konstruktor
+    public Osoba(string imie, string nazwisko, int wiek)
+    {
+        Imie = imie;
+        Nazwisko = nazwisko;
+        Wiek = wiek;
+    }
+}
+
+// Interfejs IPorownywalny
+interface IPorownywalny
+{
+    int Porownaj(Osoba o1, Osoba o2);
+}
+
+// Klasa Porownywacz implementująca interfejs IPorownywalny
+class Porownywacz : IPorownywalny
+{
+    public int Porownaj(Osoba o1, Osoba o2)
+    {
+        return o1.Wiek.CompareTo(o2.Wiek);
+    }
+}
+
+// Delegat Kryterium
+delegate int Kryterium(Osoba o1, Osoba o2);
+
+// Zdarzenie ZmianaKryterium
+class Program
+{
+    static void Main()
+    {
+        // Metoda obsługi zdarzenia
+        void ZmianaKryteriumHandler()
+        {
+            Console.WriteLine("Zmieniono kryterium sortowania.");
+        }
+
+        // Utworzenie instancji Porownywacz
+        var porownywacz = new Porownywacz();
+
+        // Utworzenie instancji tablicy obiektów klasy Osoba
+        var osoby = new Osoba[]
+        {
+            new Osoba("Jan", "Kowalski", 30),
+            new Osoba("Anna", "Nowak", 25),
+            new Osoba("Piotr", "Wiśniewski", 35)
+        };
+
+        // Utworzenie instancji Sortuj i zarejestrowanie obsługi zdarzenia
+        Sortuj(osoby, porownywacz.Porownaj);
+        ZmianaKryterium += ZmianaKryteriumHandler;
+
+        // Wywołanie metody Sortuj, która spowoduje wywołanie zdarzenia ZmianaKryterium
+        Sortuj(osoby, (o1, o2) => o2.Wiek.CompareTo(o1.Wiek));
+
+        // Wyświetlenie posortowanej tablicy
+        Wyswietl(osoby);
+    }
+
+    // Zdarzenie ZmianaKryterium
+    static event Kryterium ZmianaKryterium;
+
+    // Metoda Sortuj
+    static void Sortuj(Osoba[] osoby, Kryterium kryterium)
+    {
+        Array.Sort(osoby, new Comparison<Osoba>(kryterium));
+        ZmianaKryterium?.Invoke();
+    }
+
+    // Metoda Wyswietl
+    static void Wyswietl(Osoba[] osoby)
+    {
+        foreach (var osoba in osoby)
+        {
+            Console.WriteLine($"Imię: {osoba.Imie}, Nazwisko: {osoba.Nazwisko}, Wiek: {osoba.Wiek}");
+        }
+    }
+}
+
+*/
+
+CZAT 4
+
+using System;
+
+class Osoba
+{
+    public string Imie { get; set; }
+    public string Nazwisko { get; set; }
+    public int Wiek { get; set; }
+
+    public Osoba(string imie, string nazwisko, int wiek)
+    {
+        Imie = imie;
+        Nazwisko = nazwisko;
+        Wiek = wiek;
+    }
+}
+
+interface IPorownywalny
+{
+    int Porownaj(Osoba o1, Osoba o2);
+}
+
+class Porownywacz : IPorownywalny
+{
+    public int Porownaj(Osoba o1, Osoba o2)
+    {
+        return o1.Wiek.CompareTo(o2.Wiek);
+    }
+}
+
+delegate int Kryterium(Osoba o1, Osoba o2);
+
+class Sorter
+{
+    public event Kryterium ZmianaKryterium;
+
+    public void Sortuj(Osoba[] osoby, Kryterium kryterium)
+    {
+        if (ZmianaKryterium != null)
+        {
+            ZmianaKryterium += kryterium;
+            ZmianaKryterium.Invoke(osoby[0], osoby[1]); // Przykładowe wywołanie
+        }
+        Array.Sort(osoby, new Comparison<Osoba>((o1, o2) => kryterium(o1, o2)));
+    }
+}
+
+class Program
+{
+    static void Wyswietl(Osoba[] osoby)
+    {
+        foreach (var osoba in osoby)
+        {
+            Console.WriteLine($"Imię: {osoba.Imie}, Nazwisko: {osoba.Nazwisko}, Wiek: {osoba.Wiek}");
+        }
+    }
+
+    static void Main()
+    {
+        Osoba[] osoby = {
+            new Osoba("Jan", "Kowalski", 30),
+            new Osoba("Anna", "Nowak", 25),
+            new Osoba("Piotr", "Wiśniewski", 40)
+        };
+
+        Porownywacz porownywacz = new Porownywacz();
+        Sorter sorter = new Sorter();
+
+        sorter.ZmianaKryterium += (o1, o2) => {
+            Console.WriteLine("Zmiana kryterium sortowania.");
+            return 0; // Tylko dla celów demonstracyjnych
+        };
+
+        sorter.Sortuj(osoby, porownywacz.Porownaj);
+        Wyswietl(osoby);
+    }
+}
+
+
+
+
+
